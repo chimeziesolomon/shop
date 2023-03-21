@@ -1,5 +1,5 @@
 const reducer = (state, action) => {
-    if (action.type === 'CEAR_LIST') {
+    if (action.type === 'CLEAR_LIST') {
         return {...state, shop: [] }
     }
     if (action.type === 'REMOVE') {
@@ -64,7 +64,7 @@ const reducer = (state, action) => {
             return shopItem
         })
         .filter((shopItem) => shopItem.amount !== 0)
-        return { ...state, cart: tempShop }
+        return { ...state, shop: tempShop }
     }
     throw new Error('does not match any type')
 }

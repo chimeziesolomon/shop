@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React  from 'react';
+import { useGlobalContext } from './context';
+
+//components
+import Navbar from './Navbar';
+import ShopContainer from './ShopContainer';
+
+//items
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+ // const { loading } = useGlobalContext()
+ // if (loading) {
+  // return (
+   //   <div className='loading'>
+   //     <h1>loading...</h1>
+   //   </div>
+   // )
+ // }
+ 
+    return (
+      <div>
+        <main>
+          <Navbar />
+          <ShopContainer />
+        </main>
+      </div>
+    );
+  }
+
 
 export default App;
